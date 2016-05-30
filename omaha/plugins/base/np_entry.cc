@@ -1,4 +1,4 @@
-/* -*- Mode: C++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+ï»¿/* -*- Mode: C++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 /* ***** BEGIN LICENSE BLOCK *****
  * Version: NPL 1.1/GPL 2.0/LGPL 2.1
  *
@@ -234,7 +234,7 @@ void SetUpQD(void)
   CFragConnectionID   connID;
   Str255              errName;
 
-  // Memorize the plugin¹s resource file refnum for later use.
+  // Memorize the pluginÂ¹s resource file refnum for later use.
   gResFile = CurResFile();
 
 #if !TARGET_API_MAC_CARBON
@@ -263,7 +263,7 @@ void SetUpQD(void)
   if (result == noErr) {
     // Now that we know the app name and FSSpec, we can call GetDiskFragment
     // to get a connID to use in a subsequent call to FindSymbol (it will also
-    // return the address of ³main² in app, which we ignore).  If GetDiskFragment
+    // return the address of Â³mainÂ² in app, which we ignore).  If GetDiskFragment
     // returns an error, we assume the app must be 68K.
     Ptr mainAddr;
     result =  GetDiskFragment(infoRec.processAppSpec, 0L, 0L, infoRec.processName,
@@ -272,7 +272,7 @@ void SetUpQD(void)
 
   if (result == noErr) {
     // The app is a PPC code fragment, so call FindSymbol
-    // to get the exported ³qd² symbol so we can access its
+    // to get the exported Â³qdÂ² symbol so we can access its
     // QuickDraw globals.
     CFragSymbolClass symClass;
     result = FindSymbol(connID, "\pqd", (Ptr*)&gQDPtr, &symClass);
